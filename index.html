@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Tool Manager — les outils web TBRT</title>
-<meta name="description" content="La porte d'entrée des outils web TBRT : diagnostic ISOBUS, réglage des boîtiers, grilles de plantation, shapefiles et guidage RTK.">
+<title>Tool Manager — outils et applications TBRT</title>
+<meta name="description" content="La porte d'entrée des outils et applications TBRT : diagnostic ISOBUS, réglage des boîtiers, grilles de plantation, shapefiles et guidage RTK.">
 <meta name="theme-color" content="#efede4">
-<meta property="og:title" content="Tool Manager — les outils web TBRT">
-<meta property="og:description" content="La porte d'entrée des outils web TBRT : diagnostic ISOBUS, réglage des boîtiers, grilles de plantation, shapefiles et guidage RTK.">
+<meta property="og:title" content="Tool Manager — outils et applications TBRT">
+<meta property="og:description" content="La porte d'entrée des outils et applications TBRT : diagnostic ISOBUS, réglage des boîtiers, grilles de plantation, shapefiles et guidage RTK.">
 <meta property="og:type" content="website">
 <link rel="icon" type="image/svg+xml" href="logo.svg">
 <link rel="preload" href="fontes/archivo-latin-wdth-normal.woff2" as="font" type="font/woff2" crossorigin>
@@ -45,7 +45,7 @@
     <span class="ligne-2" aria-hidden="true">Manager</span>
   </h1>
 
-  <p class="accroche">Tous les outils web TBRT, branchés sur le même bus. Choisissez le vôtre.</p>
+  <p class="accroche">Les outils et applications TBRT, branchés sur le même bus. Choisissez le vôtre.</p>
 </header>
 
 <main class="bus">
@@ -56,162 +56,172 @@
     <span class="terminaison">TBC</span>
   </div>
 
-  <!-- Ajouter un outil : copier un bloc « module », changer l'adresse, le lien et le texte.
-       Lien vivant = <a class="module">. Pas encore en ligne = <div class="module attente">,
+  <!-- Ajouter un logiciel : copier un bloc « module » dans sa famille, changer l'adresse, le lien
+       et le texte. Lien vivant = <a class="module">. Pas encore en ligne = <div class="module attente">,
        jamais un lien mort. La marche à suivre complète : tools/tool-manager/CLAUDE.md. -->
 
-  <a class="module m-vert" href="https://diagtooltbrt.netlify.app/">
-    <div class="module-tete"><span class="adr">01 — Boîtier</span><span class="etat en-ligne">En ligne</span></div>
-    <svg class="visuel" viewBox="0 0 480 170" aria-hidden="true">
-      <defs>
-        <path id="can-h" d="M0 67H20V38H40V67H70V38H80V67H110V38H140V67H160"/>
-        <path id="can-l" d="M0 73H20V102H40V73H70V102H80V73H110V102H140V73H160"/>
-      </defs>
-      <g class="v-onde anim" fill="none" stroke-width="3">
-        <g stroke="var(--sig)">
-          <use href="#can-h"/><use href="#can-h" x="160"/><use href="#can-h" x="320"/><use href="#can-h" x="480"/>
-        </g>
-        <g stroke="currentColor">
-          <use href="#can-l"/><use href="#can-l" x="160"/><use href="#can-l" x="320"/><use href="#can-l" x="480"/>
-        </g>
-      </g>
-      <text class="v-mono" x="0" y="146">18EEFF80  8  A0 1C 00 00 00 00 40 C0</text>
-    </svg>
-    <h2>Diag Tool</h2>
-    <p>Le bilan d'un boîtier TBRT par son câble USB, ou la relecture d'une trace CAN. Le support reçoit tout en un seul fichier.</p>
-    <div class="module-pied"><span class="requis">Chrome, Edge, Firefox 151+</span><svg class="fleche" viewBox="0 0 32 16" aria-hidden="true"><path d="M0 8H29M22 1l7 7-7 7"/></svg></div>
-  </a>
+  <section class="famille">
+    <div class="famille-tete"><h2>Outils</h2><p class="meta">Diagnostiquer · simuler</p></div>
+    <div class="cartes">
+      <a class="module m-vert" href="https://diagtooltbrt.netlify.app/">
+        <div class="module-tete"><span class="adr">01 — Boîtier</span><span class="etat en-ligne">En ligne</span></div>
+        <svg class="visuel" viewBox="0 0 480 170" aria-hidden="true">
+          <defs>
+            <path id="can-h" d="M0 67H20V38H40V67H70V38H80V67H110V38H140V67H160"/>
+            <path id="can-l" d="M0 73H20V102H40V73H70V102H80V73H110V102H140V73H160"/>
+          </defs>
+          <g class="v-onde anim" fill="none" stroke-width="3">
+            <g stroke="var(--sig)">
+              <use href="#can-h"/><use href="#can-h" x="160"/><use href="#can-h" x="320"/><use href="#can-h" x="480"/>
+            </g>
+            <g stroke="currentColor">
+              <use href="#can-l"/><use href="#can-l" x="160"/><use href="#can-l" x="320"/><use href="#can-l" x="480"/>
+            </g>
+          </g>
+          <text class="v-mono" x="0" y="146">18EEFF80  8  A0 1C 00 00 00 00 40 C0</text>
+        </svg>
+        <h3>Diag Tool</h3>
+        <p>Le bilan d'un boîtier TBRT par son câble USB, ou la relecture d'une trace CAN. Le support reçoit tout en un seul fichier.</p>
+        <div class="module-pied"><span class="requis">Chrome, Edge, Firefox 151+</span><svg class="fleche" viewBox="0 0 32 16" aria-hidden="true"><path d="M0 8H29M22 1l7 7-7 7"/></svg></div>
+      </a>
 
-  <div class="module attente m-bleu">
-    <div class="module-tete"><span class="adr">02 — Boîtier</span><span class="etat">Bientôt en ligne</span></div>
-    <svg class="visuel" viewBox="0 0 480 170" aria-hidden="true">
-      <g class="v-boutons">
-        <g class="bt"><rect x="19" y="20" width="50" height="60" rx="7"/><text x="44" y="54">01</text></g>
-        <g class="bt"><rect x="75" y="20" width="50" height="60" rx="7"/><text x="100" y="54">02</text></g>
-        <g class="bt"><rect x="131" y="20" width="50" height="60" rx="7"/><text x="156" y="54">03</text></g>
-        <g class="bt"><rect x="187" y="20" width="50" height="60" rx="7"/><text x="212" y="54">04</text></g>
-        <g class="bt"><rect x="243" y="20" width="50" height="60" rx="7"/><text x="268" y="54">05</text></g>
-        <g class="bt"><rect x="299" y="20" width="50" height="60" rx="7"/><text x="324" y="54">06</text></g>
-        <g class="bt"><rect x="355" y="20" width="50" height="60" rx="7"/><text x="380" y="54">07</text></g>
-        <g class="bt"><rect x="411" y="20" width="50" height="60" rx="7"/><text x="436" y="54">08</text></g>
-        <g class="bt"><rect x="19" y="90" width="50" height="60" rx="7"/><text x="44" y="124">09</text></g>
-        <g class="bt"><rect x="75" y="90" width="50" height="60" rx="7"/><text x="100" y="124">10</text></g>
-        <g class="bt"><rect x="131" y="90" width="50" height="60" rx="7"/><text x="156" y="124">11</text></g>
-        <g class="bt"><rect x="187" y="90" width="50" height="60" rx="7"/><text x="212" y="124">12</text></g>
-        <g class="bt"><rect x="243" y="90" width="50" height="60" rx="7"/><text x="268" y="124">13</text></g>
-        <g class="bt"><rect x="299" y="90" width="50" height="60" rx="7"/><text x="324" y="124">14</text></g>
-        <g class="bt"><rect x="355" y="90" width="50" height="60" rx="7"/><text x="380" y="124">15</text></g>
-        <g class="bt"><rect x="411" y="90" width="50" height="60" rx="7"/><text x="436" y="124">16</text></g>
-      </g>
-    </svg>
-    <h2>AUX-N Manager</h2>
-    <p>Dessinez les mises en page des seize boutons d'AUX-N et envoyez-les au boîtier par USB.</p>
-    <div class="module-pied"><span class="requis">Chrome, Edge, Firefox 151+</span></div>
-  </div>
+      <a class="module m-rouge" href="http://127.0.0.1:8770/">
+        <div class="module-tete"><span class="adr">02 — Banc d'essai</span><span class="etat local">Sur votre PC</span></div>
+        <svg class="visuel" viewBox="0 0 480 170" aria-hidden="true">
+          <g fill="none" stroke="currentColor">
+            <path d="M34 118A66 66 0 0 1 166 118" stroke-width="3"/>
+            <path d="M34 118A66 66 0 0 1 166 118" stroke-width="12" stroke-dasharray="1.5 19.2" transform="translate(100 118) scale(.84) translate(-100 -118)"/>
+            <path d="M204 118A66 66 0 0 1 336 118" stroke-width="3"/>
+            <path d="M204 118A66 66 0 0 1 336 118" stroke-width="12" stroke-dasharray="1.5 19.2" transform="translate(270 118) scale(.84) translate(-270 -118)"/>
+          </g>
+          <line class="aiguille a1 anim" x1="100" y1="118" x2="100" y2="66" stroke="var(--sig)" stroke-width="4" stroke-linecap="round"/>
+          <circle cx="100" cy="118" r="6" fill="currentColor"/>
+          <line class="aiguille a2 anim" x1="270" y1="118" x2="270" y2="66" stroke="var(--sig)" stroke-width="4" stroke-linecap="round"/>
+          <circle cx="270" cy="118" r="6" fill="currentColor"/>
+          <text class="v-mono centre" x="100" y="150">KM/H</text>
+          <text class="v-mono centre" x="270" y="150">PDF</text>
+          <rect x="388" y="30" width="52" height="96" rx="3" fill="none" stroke="currentColor" stroke-width="2.5"/>
+          <rect class="v-relevage anim" x="394" y="36" width="40" height="84" fill="var(--sig)"/>
+          <text class="v-mono centre" x="414" y="150">RELEV.</text>
+        </svg>
+        <h3>Simulateur TECU</h3>
+        <p>Un tracteur de banc sur l'ISOBUS : vitesses, relevages, PDF, distributeurs. Lancez d'abord <em>Simulateur TECU.cmd</em> sur le PC, avec un adaptateur PCAN-USB.</p>
+        <div class="module-pied"><span class="requis">Page locale, port 8770</span><svg class="fleche" viewBox="0 0 32 16" aria-hidden="true"><path d="M0 8H29M22 1l7 7-7 7"/></svg></div>
+      </a>
+    </div>
+  </section>
 
-  <div class="module attente m-vert">
-    <div class="module-tete"><span class="adr">03 — Parcelle</span><span class="etat">Bientôt en ligne</span></div>
-    <svg class="visuel" viewBox="0 0 480 170" aria-hidden="true">
-      <defs>
-        <clipPath id="parcelle-grille"><path d="M34 26L432 12 458 142 60 158Z"/></clipPath>
-        <pattern id="pieds-vides" width="20" height="18" patternUnits="userSpaceOnUse" patternTransform="rotate(-2.5)"><circle cx="10" cy="9" r="2.2" fill="currentColor" opacity=".4"/></pattern>
-        <pattern id="pieds-plantes" width="20" height="18" patternUnits="userSpaceOnUse" patternTransform="rotate(-2.5)"><circle cx="10" cy="9" r="4.2" fill="var(--sig)"/></pattern>
-      </defs>
-      <g clip-path="url(#parcelle-grille)">
-        <rect width="480" height="170" fill="url(#pieds-vides)"/>
-        <rect class="v-plantes anim" width="480" height="170" fill="url(#pieds-plantes)"/>
-      </g>
-      <path d="M34 26L432 12 458 142 60 158Z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
-      <g class="v-viseur anim">
-        <line x1="288" y1="2" x2="288" y2="168" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 4"/>
-        <circle cx="288" cy="84" r="10" fill="var(--fond-carte)" stroke="currentColor" stroke-width="2.5"/>
-        <circle cx="288" cy="84" r="3" fill="currentColor"/>
-      </g>
-    </svg>
-    <h2>GRID Manager</h2>
-    <p>Calculez la grille d'une plantation au point RTK, vigne ou arbres, puis envoyez-la au module ISO-GRID.</p>
-    <div class="module-pied"><span class="requis">Chrome ou Edge sur ordinateur</span></div>
-  </div>
+  <section class="famille">
+    <div class="famille-tete"><h2>Applications</h2><p class="meta">Régler un boîtier · préparer une parcelle</p></div>
+    <div class="cartes">
+      <div class="module attente m-bleu">
+        <div class="module-tete"><span class="adr">03 — Boîtier</span><span class="etat">Bientôt en ligne</span></div>
+        <svg class="visuel" viewBox="0 0 480 170" aria-hidden="true">
+          <g class="v-boutons">
+            <g class="bt"><rect x="19" y="20" width="50" height="60" rx="7"/><text x="44" y="54">01</text></g>
+            <g class="bt"><rect x="75" y="20" width="50" height="60" rx="7"/><text x="100" y="54">02</text></g>
+            <g class="bt"><rect x="131" y="20" width="50" height="60" rx="7"/><text x="156" y="54">03</text></g>
+            <g class="bt"><rect x="187" y="20" width="50" height="60" rx="7"/><text x="212" y="54">04</text></g>
+            <g class="bt"><rect x="243" y="20" width="50" height="60" rx="7"/><text x="268" y="54">05</text></g>
+            <g class="bt"><rect x="299" y="20" width="50" height="60" rx="7"/><text x="324" y="54">06</text></g>
+            <g class="bt"><rect x="355" y="20" width="50" height="60" rx="7"/><text x="380" y="54">07</text></g>
+            <g class="bt"><rect x="411" y="20" width="50" height="60" rx="7"/><text x="436" y="54">08</text></g>
+            <g class="bt"><rect x="19" y="90" width="50" height="60" rx="7"/><text x="44" y="124">09</text></g>
+            <g class="bt"><rect x="75" y="90" width="50" height="60" rx="7"/><text x="100" y="124">10</text></g>
+            <g class="bt"><rect x="131" y="90" width="50" height="60" rx="7"/><text x="156" y="124">11</text></g>
+            <g class="bt"><rect x="187" y="90" width="50" height="60" rx="7"/><text x="212" y="124">12</text></g>
+            <g class="bt"><rect x="243" y="90" width="50" height="60" rx="7"/><text x="268" y="124">13</text></g>
+            <g class="bt"><rect x="299" y="90" width="50" height="60" rx="7"/><text x="324" y="124">14</text></g>
+            <g class="bt"><rect x="355" y="90" width="50" height="60" rx="7"/><text x="380" y="124">15</text></g>
+            <g class="bt"><rect x="411" y="90" width="50" height="60" rx="7"/><text x="436" y="124">16</text></g>
+          </g>
+        </svg>
+        <h3>AUX-N Manager</h3>
+        <p>Dessinez les mises en page des seize boutons d'AUX-N et envoyez-les au boîtier par USB.</p>
+        <div class="module-pied"><span class="requis">Chrome, Edge, Firefox 151+</span></div>
+      </div>
 
-  <a class="module m-rouge" href="https://shpmanager.netlify.app/">
-    <div class="module-tete"><span class="adr">04 — Parcelle</span><span class="etat en-ligne">En ligne · bêta</span></div>
-    <svg class="visuel" viewBox="0 0 480 170" aria-hidden="true">
-      <g transform="rotate(-5 240 85)">
-        <g stroke="currentColor" stroke-width="8" stroke-linecap="round" stroke-dasharray="0 20">
-          <line x1="-40" y1="-4" x2="520" y2="-4"/>
-          <line x1="-40" y1="27" x2="520" y2="27"/>
-          <line x1="-40" y1="58" x2="520" y2="58"/>
-          <line x1="-40" y1="89" x2="520" y2="89"/>
-          <line x1="-40" y1="120" x2="520" y2="120"/>
-          <line x1="-40" y1="151" x2="520" y2="151"/>
-          <line x1="-40" y1="182" x2="520" y2="182"/>
-        </g>
-        <g class="v-manquants" fill="var(--fond-carte)" stroke="var(--sig)" stroke-width="3.5">
-          <circle class="anim" cx="120" cy="27" r="9"/>
-          <circle class="anim" cx="240" cy="58" r="9"/>
-          <circle class="anim" cx="260" cy="58" r="9"/>
-          <circle class="anim" cx="400" cy="89" r="9"/>
-          <circle class="anim" cx="80" cy="120" r="9"/>
-          <circle class="anim" cx="320" cy="151" r="9"/>
-        </g>
-      </g>
-    </svg>
-    <h2>SHP Manager</h2>
-    <p>Relevez les pieds de vigne manquants et récupérez des shapefiles prêts pour la console GPS.</p>
-    <div class="module-pied"><span class="requis">Console Raven validée</span><svg class="fleche" viewBox="0 0 32 16" aria-hidden="true"><path d="M0 8H29M22 1l7 7-7 7"/></svg></div>
-  </a>
+      <div class="module attente m-vert">
+        <div class="module-tete"><span class="adr">04 — Parcelle</span><span class="etat">Bientôt en ligne</span></div>
+        <svg class="visuel" viewBox="0 0 480 170" aria-hidden="true">
+          <defs>
+            <clipPath id="parcelle-grille"><path d="M34 26L432 12 458 142 60 158Z"/></clipPath>
+            <pattern id="pieds-vides" width="20" height="18" patternUnits="userSpaceOnUse" patternTransform="rotate(-2.5)"><circle cx="10" cy="9" r="2.2" fill="currentColor" opacity=".4"/></pattern>
+            <pattern id="pieds-plantes" width="20" height="18" patternUnits="userSpaceOnUse" patternTransform="rotate(-2.5)"><circle cx="10" cy="9" r="4.2" fill="var(--sig)"/></pattern>
+          </defs>
+          <g clip-path="url(#parcelle-grille)">
+            <rect width="480" height="170" fill="url(#pieds-vides)"/>
+            <rect class="v-plantes anim" width="480" height="170" fill="url(#pieds-plantes)"/>
+          </g>
+          <path d="M34 26L432 12 458 142 60 158Z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+          <g class="v-viseur anim">
+            <line x1="288" y1="2" x2="288" y2="168" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 4"/>
+            <circle cx="288" cy="84" r="10" fill="var(--fond-carte)" stroke="currentColor" stroke-width="2.5"/>
+            <circle cx="288" cy="84" r="3" fill="currentColor"/>
+          </g>
+        </svg>
+        <h3>GRID Manager</h3>
+        <p>Calculez la grille d'une plantation au point RTK, vigne ou arbres, puis envoyez-la au module ISO-GRID.</p>
+        <div class="module-pied"><span class="requis">Chrome ou Edge sur ordinateur</span></div>
+      </div>
 
-  <a class="module m-bleu" href="https://magicfield.netlify.app/">
-    <div class="module-tete"><span class="adr">05 — Parcelle</span><span class="etat en-ligne">En ligne</span></div>
-    <svg class="visuel" viewBox="0 0 480 170" aria-hidden="true">
-      <path d="M36 32C120 12 300 8 446 22L464 146C340 164 150 162 50 152Z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
-      <path class="v-passes anim" pathLength="100" d="M68 46C170 32 300 30 424 40A9 9 0 0 1 426 58C300 48 170 50 70 64A9 9 0 0 0 72 82C170 68 300 66 428 76A9 9 0 0 1 430 94C300 84 170 86 74 100A9 9 0 0 0 76 118C170 104 300 102 432 112A9 9 0 0 1 434 130C300 120 170 122 78 136" fill="none" stroke="var(--sig)" stroke-width="4" stroke-linecap="round"/>
-    </svg>
-    <h2>Magic</h2>
-    <p>Planifiez le guidage RTK d'une parcelle : fourrières, lignes, demi-tours, ordre de passage. Lisez et écrivez les fichiers Raven, ISOXML, Trimble et CNH.</p>
-    <div class="module-pied"><span class="requis">Rien à installer</span><svg class="fleche" viewBox="0 0 32 16" aria-hidden="true"><path d="M0 8H29M22 1l7 7-7 7"/></svg></div>
-  </a>
+      <a class="module m-rouge" href="https://shpmanager.netlify.app/">
+        <div class="module-tete"><span class="adr">05 — Parcelle</span><span class="etat en-ligne">En ligne · bêta</span></div>
+        <svg class="visuel" viewBox="0 0 480 170" aria-hidden="true">
+          <g transform="rotate(-5 240 85)">
+            <g stroke="currentColor" stroke-width="8" stroke-linecap="round" stroke-dasharray="0 20">
+              <line x1="-40" y1="-4" x2="520" y2="-4"/>
+              <line x1="-40" y1="27" x2="520" y2="27"/>
+              <line x1="-40" y1="58" x2="520" y2="58"/>
+              <line x1="-40" y1="89" x2="520" y2="89"/>
+              <line x1="-40" y1="120" x2="520" y2="120"/>
+              <line x1="-40" y1="151" x2="520" y2="151"/>
+              <line x1="-40" y1="182" x2="520" y2="182"/>
+            </g>
+            <g class="v-manquants" fill="var(--fond-carte)" stroke="var(--sig)" stroke-width="3.5">
+              <circle class="anim" cx="120" cy="27" r="9"/>
+              <circle class="anim" cx="240" cy="58" r="9"/>
+              <circle class="anim" cx="260" cy="58" r="9"/>
+              <circle class="anim" cx="400" cy="89" r="9"/>
+              <circle class="anim" cx="80" cy="120" r="9"/>
+              <circle class="anim" cx="320" cy="151" r="9"/>
+            </g>
+          </g>
+        </svg>
+        <h3>SHP Manager</h3>
+        <p>Relevez les pieds de vigne manquants et récupérez des shapefiles prêts pour la console GPS.</p>
+        <div class="module-pied"><span class="requis">Console Raven validée</span><svg class="fleche" viewBox="0 0 32 16" aria-hidden="true"><path d="M0 8H29M22 1l7 7-7 7"/></svg></div>
+      </a>
 
-  <a class="module m-rouge" href="http://127.0.0.1:8770/">
-    <div class="module-tete"><span class="adr">06 — Banc d'essai</span><span class="etat local">Sur votre PC</span></div>
-    <svg class="visuel" viewBox="0 0 480 170" aria-hidden="true">
-      <g fill="none" stroke="currentColor">
-        <path d="M34 118A66 66 0 0 1 166 118" stroke-width="3"/>
-        <path d="M34 118A66 66 0 0 1 166 118" stroke-width="12" stroke-dasharray="1.5 19.2" transform="translate(100 118) scale(.84) translate(-100 -118)"/>
-        <path d="M204 118A66 66 0 0 1 336 118" stroke-width="3"/>
-        <path d="M204 118A66 66 0 0 1 336 118" stroke-width="12" stroke-dasharray="1.5 19.2" transform="translate(270 118) scale(.84) translate(-270 -118)"/>
-      </g>
-      <line class="aiguille a1 anim" x1="100" y1="118" x2="100" y2="66" stroke="var(--sig)" stroke-width="4" stroke-linecap="round"/>
-      <circle cx="100" cy="118" r="6" fill="currentColor"/>
-      <line class="aiguille a2 anim" x1="270" y1="118" x2="270" y2="66" stroke="var(--sig)" stroke-width="4" stroke-linecap="round"/>
-      <circle cx="270" cy="118" r="6" fill="currentColor"/>
-      <text class="v-mono centre" x="100" y="150">KM/H</text>
-      <text class="v-mono centre" x="270" y="150">PDF</text>
-      <rect x="388" y="30" width="52" height="96" rx="3" fill="none" stroke="currentColor" stroke-width="2.5"/>
-      <rect class="v-relevage anim" x="394" y="36" width="40" height="84" fill="var(--sig)"/>
-      <text class="v-mono centre" x="414" y="150">RELEV.</text>
-    </svg>
-    <h2>Simulateur TECU</h2>
-    <p>Un tracteur de banc sur l'ISOBUS : vitesses, relevages, PDF, distributeurs. Lancez d'abord <em>Simulateur TECU.cmd</em> sur le PC, avec un adaptateur PCAN-USB.</p>
-    <div class="module-pied"><span class="requis">Page locale, port 8770</span><svg class="fleche" viewBox="0 0 32 16" aria-hidden="true"><path d="M0 8H29M22 1l7 7-7 7"/></svg></div>
-  </a>
+      <a class="module m-bleu" href="https://magicfield.netlify.app/">
+        <div class="module-tete"><span class="adr">06 — Parcelle</span><span class="etat en-ligne">En ligne</span></div>
+        <svg class="visuel" viewBox="0 0 480 170" aria-hidden="true">
+          <path d="M36 32C120 12 300 8 446 22L464 146C340 164 150 162 50 152Z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+          <path class="v-passes anim" pathLength="100" d="M68 46C170 32 300 30 424 40A9 9 0 0 1 426 58C300 48 170 50 70 64A9 9 0 0 0 72 82C170 68 300 66 428 76A9 9 0 0 1 430 94C300 84 170 86 74 100A9 9 0 0 0 76 118C170 104 300 102 432 112A9 9 0 0 1 434 130C300 120 170 122 78 136" fill="none" stroke="var(--sig)" stroke-width="4" stroke-linecap="round"/>
+        </svg>
+        <h3>Magic</h3>
+        <p>Planifiez le guidage RTK d'une parcelle : fourrières, lignes, demi-tours, ordre de passage. Lisez et écrivez les fichiers Raven, ISOXML, Trimble et CNH.</p>
+        <div class="module-pied"><span class="requis">Rien à installer</span><svg class="fleche" viewBox="0 0 32 16" aria-hidden="true"><path d="M0 8H29M22 1l7 7-7 7"/></svg></div>
+      </a>
 
-  <div class="module prise">
-    <div class="module-tete"><span class="adr">07 — Libre</span></div>
-    <svg class="visuel" viewBox="0 0 480 170" aria-hidden="true">
-      <g fill="none" stroke="currentColor" stroke-width="2.5">
-        <circle cx="240" cy="85" r="66" stroke-dasharray="6 7"/>
-        <circle cx="240" cy="85" r="50"/>
-      </g>
-      <g fill="currentColor">
-        <circle cx="240" cy="85" r="5"/>
-        <circle cx="240" cy="57" r="5"/><circle cx="260" cy="65" r="5"/><circle cx="268" cy="85" r="5"/><circle cx="260" cy="105" r="5"/>
-        <circle cx="240" cy="113" r="5"/><circle cx="220" cy="105" r="5"/><circle cx="212" cy="85" r="5"/><circle cx="220" cy="65" r="5"/>
-      </g>
-    </svg>
-    <h2>Prochain outil</h2>
-    <p>Une prise libre sur le bus. Le prochain outil TBRT se branchera ici.</p>
-  </div>
+      <div class="module prise">
+        <div class="module-tete"><span class="adr">07 — Libre</span></div>
+        <svg class="visuel" viewBox="0 0 480 170" aria-hidden="true">
+          <g fill="none" stroke="currentColor" stroke-width="2.5">
+            <circle cx="240" cy="85" r="66" stroke-dasharray="6 7"/>
+            <circle cx="240" cy="85" r="50"/>
+          </g>
+          <g fill="currentColor">
+            <circle cx="240" cy="85" r="5"/>
+            <circle cx="240" cy="57" r="5"/><circle cx="260" cy="65" r="5"/><circle cx="268" cy="85" r="5"/><circle cx="260" cy="105" r="5"/>
+            <circle cx="240" cy="113" r="5"/><circle cx="220" cy="105" r="5"/><circle cx="212" cy="85" r="5"/><circle cx="220" cy="65" r="5"/>
+          </g>
+        </svg>
+        <h3>Prise libre</h3>
+        <p>Le prochain logiciel TBRT se branchera ici.</p>
+      </div>
+    </div>
+  </section>
 </main>
 
 <footer class="pied">
