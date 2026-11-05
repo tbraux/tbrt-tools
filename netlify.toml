@@ -1,0 +1,23 @@
+# Tool Manager — déploiement Netlify.
+#
+# Site STATIQUE : une page, une feuille de style, deux polices. Aucun script,
+# aucune fonction, aucune base. D'où une politique de sécurité fermée à tout
+# sauf à ce que la page sert elle-même.
+
+[build]
+  publish = "."
+  command = ""
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Strict-Transport-Security = "max-age=31536000"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "no-referrer"
+    Content-Security-Policy = "default-src 'none'; style-src 'self'; font-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'"
+
+# Les polices ne changent pas : le nom du fichier change avec elles.
+[[headers]]
+  for = "/fontes/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
