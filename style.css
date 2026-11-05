@@ -413,7 +413,7 @@ a.module:focus-visible .fleche { transform: translateX(6px); }
   animation: bouton-texte 5.4s linear infinite var(--jeu);
   animation-delay: var(--d, -2.2s);
 }
-.bt:nth-child(3n) { --d: -.9s; }
+.bt:nth-child(3n) { --d: -1.2s; }
 .bt:nth-child(3n+1) { --d: -3.3s; }
 .bt:nth-child(5n) { --d: -.2s; }
 .bt:nth-child(7n) { --d: -4.4s; }
